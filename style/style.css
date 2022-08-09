@@ -33,12 +33,24 @@ nav#top-nav {
 nav#top-nav #logo {
   font-size: 2.5rem;
   font-weight: 700;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  nav#top-nav #logo {
+    display: initial;
+  }
 }
 nav#top-nav ul {
-  width: 50%;
+  width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
+}
+@media screen and (min-width: 768px) {
+  nav#top-nav ul {
+    justify-content: space-evenly;
+    width: 50%;
+  }
 }
 nav#top-nav ul .active {
   font-weight: 700;
@@ -46,10 +58,15 @@ nav#top-nav ul .active {
 }
 nav#top-nav ul li {
   list-style: none;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   cursor: pointer;
   text-transform: capitalize;
   color: #605b5b;
+}
+@media screen and (min-width: 768px) {
+  nav#top-nav ul li {
+    font-size: 1.5rem;
+  }
 }
 nav#top-nav ul li:hover {
   font-weight: 700;
@@ -59,6 +76,14 @@ nav#top-nav #icons {
   display: flex;
   gap: 2rem;
   color: #b2b2b2;
+}
+nav#top-nav #icons #search {
+  display: none;
+}
+@media screen and (min-width: 1050px) {
+  nav#top-nav #icons #search {
+    display: flex;
+  }
 }
 nav#top-nav #icons .icon {
   display: flex;
@@ -293,7 +318,12 @@ section#main #main-display #products-display {
 }
 section#main #main-display #products-display .product {
   cursor: pointer;
-  width: 30%;
+  width: 45%;
+}
+@media screen and (min-width: 768px) {
+  section#main #main-display #products-display .product {
+    width: 30%;
+  }
 }
 @media screen and (min-width: 1050px) {
   section#main #main-display #products-display .product {
@@ -389,9 +419,14 @@ section#subscription {
   }
 }
 section#subscription h3 {
-  font-size: 5rem;
+  font-size: 3.5rem;
   font-weight: 300;
   text-transform: capitalize;
+}
+@media screen and (min-width: 768px) {
+  section#subscription h3 {
+    font-size: 5rem;
+  }
 }
 section#subscription p {
   font-size: 1.5rem;
@@ -438,8 +473,14 @@ footer {
 footer #foot-holder {
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+}
+@media screen and (min-width: 768px) {
+  footer #foot-holder {
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 @media screen and (min-width: 1050px) {
   footer #foot-holder {
@@ -477,9 +518,14 @@ footer #foot-holder #links .foo {
 }
 footer #foot-holder #links .foo h5 {
   color: #fff;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 500;
   text-transform: capitalize;
+}
+@media screen and (min-width: 768px) {
+  footer #foot-holder #links .foo h5 {
+    font-size: 2rem;
+  }
 }
 footer #foot-holder #links .foo ul {
   display: flex;
@@ -489,9 +535,14 @@ footer #foot-holder #links .foo ul {
 footer #foot-holder #links .foo ul li {
   list-style: none;
   color: #fff;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   text-transform: capitalize;
   cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  footer #foot-holder #links .foo ul li {
+    font-size: 1.4rem;
+  }
 }
 footer #social ul {
   display: flex;
