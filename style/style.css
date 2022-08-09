@@ -73,7 +73,12 @@ nav#top-nav #icons .icon input {
 
 #banner {
   width: 100%;
-  height: 20rem;
+  height: 10rem;
+}
+@media screen and (min-width: 1050px) {
+  #banner {
+    height: 20rem;
+  }
 }
 #banner img {
   width: 100%;
@@ -84,17 +89,27 @@ nav#top-nav #icons .icon input {
 
 section#main {
   position: relative;
-  width: 100rem;
+  width: 100%;
   padding: 3rem 0;
   display: flex;
   gap: 2rem;
 }
+@media screen and (min-width: 1050px) {
+  section#main {
+    width: 100rem;
+  }
+}
 section#main #side-bar {
   width: 25rem;
   height: 100%;
-  display: flex;
   flex-direction: column;
   gap: 2rem;
+  display: none;
+}
+@media screen and (min-width: 1050px) {
+  section#main #side-bar {
+    display: flex;
+  }
 }
 section#main #side-bar nav#filters {
   width: 100%;
@@ -267,16 +282,23 @@ section#main #main-display {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  width: 100%;
 }
 section#main #main-display #products-display {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
+  justify-content: space-evenly;
 }
 section#main #main-display #products-display .product {
-  width: calc(25% - 2rem);
   cursor: pointer;
+  width: 30%;
+}
+@media screen and (min-width: 1050px) {
+  section#main #main-display #products-display .product {
+    width: calc(25% - 2rem);
+  }
 }
 section#main #main-display #products-display .product #prod-img {
   width: 100%;
@@ -317,6 +339,13 @@ section#main #main-display #pagination {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
+  padding: 0 2rem;
+}
+@media screen and (min-width: 1050px) {
+  section#main #main-display #pagination {
+    padding: 0;
+  }
 }
 section#main #main-display #pagination #pages ul {
   display: flex;
@@ -331,7 +360,6 @@ section#main #main-display #pagination #pages ul li {
   align-items: center;
   list-style: none;
   font-size: 1.2rem;
-  border-width: 700;
   width: 3rem;
   height: 3rem;
   border: 0.2rem solid #b2b2b2;
@@ -347,13 +375,18 @@ section#main #main-display #pagination #counter {
 section#subscription {
   border-top: 0.2rem solid #b2b2b2;
   border-bottom: 0.2rem solid #b2b2b2;
-  width: 100rem;
+  width: 100%;
   padding: 3rem 0;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   gap: 3rem;
+}
+@media screen and (min-width: 1050px) {
+  section#subscription {
+    width: 100rem;
+  }
 }
 section#subscription h3 {
   font-size: 5rem;
@@ -362,9 +395,15 @@ section#subscription h3 {
 }
 section#subscription p {
   font-size: 1.5rem;
-  width: 50rem;
+  width: 100%;
+  max-width: 50rem;
   text-align: center;
   line-height: 2.2rem;
+}
+@media screen and (min-width: 1050px) {
+  section#subscription p {
+    width: 50rem;
+  }
 }
 section#subscription button {
   padding: 2rem 5rem;
@@ -389,12 +428,23 @@ footer {
   flex-direction: column;
   align-items: center;
   gap: 4rem;
+  padding: 3rem;
+}
+@media screen and (min-width: 1050px) {
+  footer {
+    padding: 3rem 0;
+  }
 }
 footer #foot-holder {
-  width: 100rem;
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
+}
+@media screen and (min-width: 1050px) {
+  footer #foot-holder {
+    width: 100rem;
+  }
 }
 footer #foot-holder #info {
   display: flex;

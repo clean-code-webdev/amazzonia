@@ -12,13 +12,11 @@ html {
 
 body {
   width: 100vw;
-  // height: 100vh;
   overflow-x: hidden;
   font-family: "Roboto", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
-  //   margin-bottom: 5rem;
 }
 
 nav#top-nav {
@@ -84,7 +82,11 @@ nav#top-nav {
 
 #banner {
   width: 100%;
-  height: 20rem;
+  height: 10rem;
+
+  @media screen and (min-width: 1050px) {
+    height: 20rem;
+  }
 
   img {
     width: 100%;
@@ -95,17 +97,25 @@ nav#top-nav {
 
 section#main {
   position: relative;
-  width: 100rem;
+  width: 100%;
   padding: 3rem 0;
   display: flex;
   gap: 2rem;
 
+  @media screen and (min-width: 1050px) {
+    width: 100rem;
+  }
+
   #side-bar {
     width: 25rem;
     height: 100%;
-    display: flex;
     flex-direction: column;
     gap: 2rem;
+    display: none;
+
+    @media screen and (min-width: 1050px) {
+      display: flex;
+    }
 
     nav#filters {
       width: 100%;
@@ -135,7 +145,6 @@ section#main {
             display: flex;
             justify-content: space-between;
             flex-direction: column;
-            // padding-right: 1rem;
 
             .active {
               font-weight: 700;
@@ -333,15 +342,22 @@ section#main {
     flex-direction: column;
     gap: 2rem;
 
+    width: 100%;
+
     #products-display {
       width: 100%;
       display: flex;
       flex-wrap: wrap;
       gap: 2rem;
+      justify-content: space-evenly;
 
       .product {
-        width: calc(25% - 2rem);
         cursor: pointer;
+        width: 30%;
+
+        @media screen and (min-width: 1050px) {
+          width: calc(25% - 2rem);
+        }
 
         #prod-img {
           width: 100%;
@@ -392,8 +408,15 @@ section#main {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      width: 100%;
+      padding: 0 2rem;
+
+      @media screen and (min-width: 1050px) {
+        padding: 0;
+      }
 
       #pages {
+        // width: 50%;
         ul {
           display: flex;
           gap: 2rem;
@@ -408,7 +431,7 @@ section#main {
             align-items: center;
             list-style: none;
             font-size: 1.2rem;
-            border-width: 700;
+            // border-width: 700;
             width: 3rem;
             height: 3rem;
             border: 0.2rem solid #b2b2b2;
@@ -420,6 +443,7 @@ section#main {
       }
 
       #counter {
+        // width: 50%;
         font-size: 1.5rem;
         color: #605b5b;
       }
@@ -430,7 +454,7 @@ section#main {
 section#subscription {
   border-top: 0.2rem solid #b2b2b2;
   border-bottom: 0.2rem solid #b2b2b2;
-  width: 100rem;
+  width: 100%;
   padding: 3rem 0;
 
   display: flex;
@@ -438,6 +462,10 @@ section#subscription {
   justify-content: space-around;
   align-items: center;
   gap: 3rem;
+
+  @media screen and (min-width: 1050px) {
+    width: 100rem;
+  }
 
   h3 {
     font-size: 5rem;
@@ -447,9 +475,14 @@ section#subscription {
 
   p {
     font-size: 1.5rem;
-    width: 50rem;
+    width: 100%;
+    max-width: 50rem;
     text-align: center;
     line-height: 2.2rem;
+
+    @media screen and (min-width: 1050px) {
+      width: 50rem;
+    }
   }
 
   button {
@@ -477,12 +510,21 @@ footer {
   flex-direction: column;
   align-items: center;
   gap: 4rem;
+  padding: 3rem;
+
+  @media screen and (min-width: 1050px) {
+    padding: 3rem 0;
+  }
 
   #foot-holder {
-    width: 100rem;
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
+
+    @media screen and (min-width: 1050px) {
+      width: 100rem;
+    }
 
     #info {
       display: flex;
