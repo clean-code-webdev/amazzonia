@@ -69,7 +69,7 @@ nav#top-nav #nav-close {
   }
 }
 nav#top-nav #logo {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
   display: none;
 }
@@ -164,7 +164,6 @@ section#main {
 }
 section#main #side-bar {
   width: 100%;
-  height: 100%;
   flex-direction: column;
   gap: 2rem;
   height: 100vh;
@@ -181,6 +180,7 @@ section#main #side-bar {
     left: -25rem;
     width: 25rem;
     overflow-y: hidden;
+    height: auto;
   }
 }
 @media screen and (min-width: 1050px) {
@@ -188,6 +188,16 @@ section#main #side-bar {
     left: 0;
     position: initial;
     display: flex;
+  }
+}
+section#main #side-bar #site-name {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  section#main #side-bar #site-name {
+    display: none;
   }
 }
 section#main #side-bar nav#filters {
