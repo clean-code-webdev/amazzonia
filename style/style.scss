@@ -18,6 +18,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  //   margin-bottom: 5rem;
 }
 
 nav#top-nav {
@@ -296,7 +297,7 @@ section#main {
         li {
           display: flex;
           gap: 1rem;
-          background: #f1f1f1;
+          //   background: #f1f1f1;
           padding: 0.5rem;
           cursor: pointer;
 
@@ -421,6 +422,139 @@ section#main {
       #counter {
         font-size: 1.5rem;
         color: #605b5b;
+      }
+    }
+  }
+}
+
+section#subscription {
+  border-top: 0.2rem solid #b2b2b2;
+  border-bottom: 0.2rem solid #b2b2b2;
+  width: 100rem;
+  padding: 3rem 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 3rem;
+
+  h3 {
+    font-size: 5rem;
+    font-weight: 300;
+    text-transform: capitalize;
+  }
+
+  p {
+    font-size: 1.5rem;
+    width: 50rem;
+    text-align: center;
+    line-height: 2.2rem;
+  }
+
+  button {
+    padding: 2rem 5rem;
+    background: #fff;
+    border: 0.2rem solid #000;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: 0.1s;
+
+    &:hover {
+      color: #fff;
+      background: #000;
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  padding: 3rem 0;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+
+  #foot-holder {
+    width: 100rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+
+    #info {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      color: #b2b2b2;
+
+      h3 {
+        font-size: 3rem;
+        text-transform: capitalize;
+        color: #bc8449;
+      }
+
+      p {
+        display: flex;
+        gap: 2rem;
+        font-size: 1.4rem;
+
+        &:first-of-type {
+          line-height: 2.2rem;
+        }
+      }
+    }
+
+    #links {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      .foo {
+        padding: 0 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+
+        h5 {
+          color: #fff;
+          font-size: 2rem;
+          font-weight: 500;
+          text-transform: capitalize;
+        }
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 1.8rem;
+
+          li {
+            list-style: none;
+            color: #fff;
+            font-size: 1.4rem;
+            text-transform: capitalize;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  #social {
+    ul {
+      display: flex;
+      gap: 5rem;
+
+      li {
+        color: #fff;
+        list-style: none;
+        font-size: 2rem;
+        cursor: pointer;
+
+        &:hover {
+          color: lime;
+        }
       }
     }
   }
