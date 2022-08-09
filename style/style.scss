@@ -49,6 +49,24 @@ nav#top-nav {
     }
   }
 
+  #nav-close {
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 1.5rem;
+    padding: 0 1rem;
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      width: 2rem;
+      height: 2rem;
+      font-size: 2rem;
+    }
+
+    @media screen and (min-width: 1050px) {
+      display: none;
+    }
+  }
+
   #logo {
     font-size: 2.5rem;
     font-weight: 700;
@@ -158,6 +176,7 @@ section#main {
     top: 2rem;
     left: -100%;
     padding: 3rem;
+    transition: 0.2s;
 
     @media screen and (min-width: 768px) {
       left: -25rem;
